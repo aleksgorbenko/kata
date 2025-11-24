@@ -14,7 +14,7 @@ class Solution {
             var chars = s.toCharArray();
             Arrays.sort(chars);
             String sortedStr = new String(chars);
-            // sorted string beomes a key to a lists
+            // sorted string becomes a key to a lists
             res.putIfAbsent(sortedStr, new ArrayList());
             // add the current string to the list
             res.get(sortedStr).add(s);
