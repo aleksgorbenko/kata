@@ -9,7 +9,9 @@ import java.util.Map;
 class P347_TopKElementsInList {
     public int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> counter = new HashMap<>();
-        List<Integer>[] freq = new List[nums.length+1];
+
+        @SuppressWarnings("unchecked")
+        List<Integer>[] freq = new List[nums.length + 1];
 
         // init empty lists for frequency tracker
         for (int i = 0; i < freq.length; i++) {
@@ -27,13 +29,15 @@ class P347_TopKElementsInList {
             freq[entry.getValue()].add(entry.getKey());
         }
 
-        // we need to have a break condition, by tracking how many elements K we have added to result
+        // we need to have a break condition, by tracking how many elements K we have
+        // added to result
         // then we can stop once we have K elements
-        // we start from the back of the freq array, since we want the most frequent elements
+        // we start from the back of the freq array, since we want the most frequent
+        // elements
         int[] result = new int[k];
         int index = 0;
-        for (int i = freq.length-1; i > 0 && index < k; i--) {
-            for (int n: freq[i]) {
+        for (int i = freq.length - 1; i > 0 && index < k; i--) {
+            for (int n : freq[i]) {
                 result[index] = n;
                 if (index == k) {
                     return result;
@@ -47,6 +51,6 @@ class P347_TopKElementsInList {
 
     public static void main(String[] args) {
         P347_TopKElementsInList sol = new P347_TopKElementsInList();
-        System.out.println(Arrays.toString(sol.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2))); // [1, 2]
+        System.out.println(Arrays.toString(sol.topKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2))); // [1, 2]
     }
 }

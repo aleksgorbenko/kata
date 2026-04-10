@@ -10,21 +10,21 @@ import java.util.Queue;
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/
 class P103_BinaryTreeZigzagLevelOrderTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> ans = new ArrayList();
+        List<List<Integer>> ans = new ArrayList<>();
 
         if (root == null) {
             return ans;
         }
 
-        Queue<TreeNode> queue = new LinkedList();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         // we need to control direction
         var leftToRightDirection = true;
 
         while (!queue.isEmpty()) {
             int levelSize = queue.size();
-            List<Integer> vals = new ArrayList();
-            Deque<TreeNode> deq = new ArrayDeque();
+            List<Integer> vals = new ArrayList<>();
+            Deque<TreeNode> deq = new ArrayDeque<>();
             for (int i = 0; i < levelSize; i++) {
                 // if we control direction correctly
                 // we should be able to just save value in the order

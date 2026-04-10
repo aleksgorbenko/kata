@@ -8,14 +8,14 @@ import java.util.Map;
 
 class P49_AnagramGroups {
     public List<List<String>> groupAnagrams(String[] strs) {
-        Map<String, List<String>> res = new HashMap();
+        Map<String, List<String>> res = new HashMap<>();
 
         for (String s : strs) {
             var chars = s.toCharArray();
             Arrays.sort(chars);
             String sortedStr = new String(chars);
             // sorted string becomes a key to a lists
-            res.putIfAbsent(sortedStr, new ArrayList());
+            res.putIfAbsent(sortedStr, new ArrayList<>());
             // add the current string to the list
             res.get(sortedStr).add(s);
         }

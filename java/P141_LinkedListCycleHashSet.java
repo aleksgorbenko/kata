@@ -7,7 +7,7 @@ class P141_LinkedListCycleHashSet {
         if (head == null || head.next == null) {
             return false;
         }
-        Set<ListNode> seen = new HashSet();
+        Set<ListNode> seen = new HashSet<>();
 
         while (head != null && head.next != null) {
             if (seen.contains(head)) {

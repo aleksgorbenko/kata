@@ -5,8 +5,8 @@ import java.util.List;
 // https://leetcode.com/problems/destination-city/description/
 class P1436_DestinationCity {
     public String destCity(List<List<String>> paths) {
-        HashMap<String, Boolean> outgoing = new HashMap();
-        HashSet<String> dest = new HashSet();
+        HashMap<String, Boolean> outgoing = new HashMap<>();
+        HashSet<String> dest = new HashSet<>();
 
         for (List<String> path : paths) {
             String from = path.get(0);

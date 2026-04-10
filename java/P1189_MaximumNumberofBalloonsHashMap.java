@@ -1,11 +1,9 @@
 import java.util.HashMap;
 
 // https://leetcode.com/problems/maximum-number-of-balloons/description/
-class P1189_MaximumNumberofBalloonsHashMap {
+class P1189_MaximumNumberOfBalloonsHashMap {
     public int maxNumberOfBalloons(String text) {
         HashMap<Character, Integer> freq = new HashMap<>();
-
-        String target = "balloon";
 
         char[] charArr = text.toCharArray();
         for (char c : charArr) {
@@ -22,7 +20,7 @@ class P1189_MaximumNumberofBalloonsHashMap {
     }
 
     public static void main(String[] args) {
-        P1189_MaximumNumberofBalloonsHashMap sol = new P1189_MaximumNumberofBalloonsHashMap();
+        P1189_MaximumNumberOfBalloonsHashMap sol = new P1189_MaximumNumberOfBalloonsHashMap();
         System.out.println(sol.maxNumberOfBalloons("nlaebolko")); // 1
         System.out.println(sol.maxNumberOfBalloons("loonbalxballpoon")); // 2
     }

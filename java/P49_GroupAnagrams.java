@@ -7,7 +7,6 @@ import java.util.List;
 class P49_GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
-        List<List<String>> res = new ArrayList<>();
 
         for (String str : strs) {
             char[] chars = str.toCharArray();
@@ -25,6 +24,6 @@ class P49_GroupAnagrams {
 
     public static void main(String[] args) {
         P49_GroupAnagrams sol = new P49_GroupAnagrams();
-        System.out.println(sol.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
+        System.out.println(sol.groupAnagrams(new String[] { "eat", "tea", "tan", "ate", "nat", "bat" }));
     }
 }

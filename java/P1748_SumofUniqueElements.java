@@ -4,7 +4,7 @@ import java.util.Map;
 // https://leetcode.com/problems/sum-of-unique-elements/description/
 class P1748_SumofUniqueElements {
     public int sumOfUnique(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int ans = 0;
 
         for (int n : nums) {

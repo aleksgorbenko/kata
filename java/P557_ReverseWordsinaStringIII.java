@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
 
-class P557_ReverseWordsinaStringIII {
+class P557_ReverseWordsInaStringIII {
     public String reverseWords(String s) {
         char space = ' ';
         int leftP = 0;
@@ -9,7 +9,7 @@ class P557_ReverseWordsinaStringIII {
         char[] charArr = s.toCharArray();
         for (int i = 0; i < charArr.length; i++) {
             // move to next space
-            while (rightP < charArr.length && charArr[rightP] != ' ') {
+            while (rightP < charArr.length && charArr[rightP] != space) {
                 rightP++;
             }
 
@@ -33,7 +33,7 @@ class P557_ReverseWordsinaStringIII {
     }
 
     public static void main(String[] args) {
-        P557_ReverseWordsinaStringIII sol = new P557_ReverseWordsinaStringIII();
+        P557_ReverseWordsInaStringIII sol = new P557_ReverseWordsInaStringIII();
         System.out.println(sol.reverseWords("Let's take LeetCode contest")); // s'teL ekat edoCteeL tsetnoc
     }
 }

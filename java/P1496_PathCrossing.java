@@ -4,7 +4,7 @@ import java.util.HashSet;
 class P1496_PathCrossing {
     public boolean isPathCrossing(String path) {
         int[] coords = new int[]{0, 0};
-        HashSet<String> visited = new HashSet();
+        HashSet<String> visited = new HashSet<>();
         visited.add(coordsToKey(coords));
 
         for (char c : path.toCharArray()) {
