@@ -1,16 +1,16 @@
-import java.util.*;        // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays;   // Arrays.sort(), Arrays.fill(), Arrays.asList()
+import java.util.*; // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.Arrays; // Arrays.sort(), Arrays.fill(), Arrays.asList()
 import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
 
 // https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
 
-class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
+class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero_ArrayList {
     private boolean[] seen;
     private Set<String> roads = new HashSet<>();
     private List<List<Integer>> graph = new ArrayList<>();
 
     public int minReorder(int n, int[][] connections) {
-        for (int i = 0;i<n;i++) {
+        for (int i = 0; i < n; i++) {
             this.graph.add(new ArrayList<>());
         }
 

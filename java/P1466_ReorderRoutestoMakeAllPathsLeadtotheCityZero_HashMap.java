@@ -1,10 +1,10 @@
-import java.util.*;        // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays;   // Arrays.sort(), Arrays.fill(), Arrays.asList()
+import java.util.*; // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.Arrays; // Arrays.sort(), Arrays.fill(), Arrays.asList()
 import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
 
 // https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
 
-class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
+class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero_HashMap {
     private boolean[] seen;
     private Set<String> roads = new HashSet<>();
     private Map<Integer, List<Integer>> graph = new HashMap<>();
@@ -20,7 +20,7 @@ class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
             this.graph.computeIfAbsent(to, k -> new ArrayList<>()).add(from);
             this.roads.add(stringify(edge[0], edge[1]));
         }
-        
+
         this.seen = new boolean[n];
         this.seen[0] = true;
 
@@ -37,7 +37,7 @@ class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
                 // add flips to the currenr answer
                 int flips = dfs(neighbour);
                 ans += flips;
-                
+
                 // if the edge exists in the original road
                 // add 1 more flip
                 String edge = stringify(node, neighbour);

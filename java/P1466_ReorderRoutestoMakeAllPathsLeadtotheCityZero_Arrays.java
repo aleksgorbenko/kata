@@ -1,23 +1,24 @@
-import java.util.*;        // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays;   // Arrays.sort(), Arrays.fill(), Arrays.asList()
+import java.util.*; // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.Arrays; // Arrays.sort(), Arrays.fill(), Arrays.asList()
 import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
 
 // https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
 
-class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
+class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero_Arrays {
     private boolean[] seen;
     private List<List<int[]>> graph = new ArrayList<>();
+
     public int minReorder(int n, int[][] connections) {
         // one direction edges only
 
         // input is Edge List
 
         // build a List<List<Integer>> graph?
-        // No... apparently we need to build List<List<int[]>>! 
+        // No... apparently we need to build List<List<int[]>>!
         // int[]{neighbourNode, needFlip?}
         // needFlip is boolean represented as 0 or 1
-        
-        for (int i = 0; i < n;i++) {
+
+        for (int i = 0; i < n; i++) {
             this.graph.add(new ArrayList<>());
         }
 
@@ -27,10 +28,10 @@ class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
         for (int[] edge : connections) {
             int from = edge[0];
             int to = edge[1]; // referred as "neighbour" in dfs method
-            this.graph.get(from).add(new int[]{to, 1});
+            this.graph.get(from).add(new int[] { to, 1 });
             // store reverse path, we don't need to flip it
             // if it is already flipped? i don't know...
-            this.graph.get(to).add(new int[]{from, 0});
+            this.graph.get(to).add(new int[] { from, 0 });
         }
 
         // mark 0 node as seen
@@ -39,7 +40,7 @@ class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
         return dfs(0);
         // start from 0 and reverse every item that 0 points, to
         // recursively reverse the following item, e.g 1 (which was just reversed)
-        // to 
+        // to
     }
 
     public int dfs(int node) {
@@ -53,7 +54,7 @@ class P1466_ReorderRoutestoMakeAllPathsLeadtotheCityZero {
                 int moreFlips = dfs(neighbour);
                 numberOfFlips += needsFlip + moreFlips;
             }
-            
+
         }
 
         return numberOfFlips;
