@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 // https://leetcode.com/problems/moving-average-from-data-stream/description/

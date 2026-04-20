@@ -2,9 +2,9 @@
 // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
 import java.util.ArrayList;
 import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.ArrayDeque;
 
 // https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/
 class P103_BinaryTreeZigzagLevelOrderTraversal_BFS {
