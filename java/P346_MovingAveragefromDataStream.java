@@ -8,7 +8,7 @@ class MovingAverage {
     private int windowSum;
 
     public MovingAverage(int size) {
-        this.queue = new LinkedList<>();
+        this.queue = new ArrayDeque<>();
         this.windowSize = size;
         this.windowSum = 0;
     }
