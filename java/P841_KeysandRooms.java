@@ -1,13 +1,13 @@
-import java.util.*;        // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays;   // Arrays.sort(), Arrays.fill(), Arrays.asList()
-import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
+
+// ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.List;
 
 // https://leetcode.com/problems/keys-and-rooms/description/
 
 class P841_KeysandRooms {
     private boolean[] seen;
     private int counter;
-    
+
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         // input is Adjency List
         // we can use it directly i think since it is 0,n-1
@@ -17,9 +17,9 @@ class P841_KeysandRooms {
         this.seen[0] = true;
         // mark first room as visited
         this.counter--;
-        
+
         dfs(0, rooms);
-        
+
         return this.counter == 0;
     }
 

@@ -1,6 +1,8 @@
-import java.util.*; // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays; // Arrays.sort(), Arrays.fill(), Arrays.asList()
-import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
+
+// ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 // https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/
 

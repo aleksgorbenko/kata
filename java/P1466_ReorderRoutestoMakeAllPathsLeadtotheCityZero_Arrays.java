@@ -1,6 +1,7 @@
-import java.util.*; // ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
-import java.util.Arrays; // Arrays.sort(), Arrays.fill(), Arrays.asList()
-import java.util.Collections; // Collections.sort(), Collections.reverseOrder()
+
+// ArrayList, HashMap, HashSet, Queue, PriorityQueue, etc.
+import java.util.ArrayList;
+import java.util.List;
 
 // https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
 
